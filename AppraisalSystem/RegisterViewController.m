@@ -56,7 +56,7 @@
                 {
                     UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"密码长度不符合要求!" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
                     [alert show];
-                } else if (_newUserName.text.length<3||_newUserName.text.length>15)
+                } else if (_newUserName.text.length<2||_newUserName.text.length>15)
                 {
                     UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"用户名长度不符合要求!" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
                     [alert show];
@@ -168,7 +168,7 @@
             if ([_newUserName.text isEqualToString:@""])
             {
                 _newUserLabel.text = @"🚫用户名不能为空!";
-            }else if (_newUserName.text.length<3||_newUserName.text.length>15)
+            }else if (_newUserName.text.length<2||_newUserName.text.length>15)
             {
                 _newUserLabel.text = @"🚫用户名长度不符合要求!";
             }else
