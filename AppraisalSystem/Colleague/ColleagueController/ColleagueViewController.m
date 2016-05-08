@@ -20,6 +20,7 @@
 {
     UIBarButtonItem *menuItem;
     UITableView *_teachTable;
+    UITableView *_mineTable;
 }
 @property (nonatomic, strong) LLSlideMenu *slideMenu;
 @property (nonatomic ,strong) NSMutableArray *teachObjectArr;
@@ -27,6 +28,7 @@
 @property (nonatomic, strong) UIPanGestureRecognizer *leftSwipe;
 @property (nonatomic, strong) UIPercentDrivenInteractiveTransition *percent;
 @property (nonatomic, strong) XWInteractiveTransition *interactivePush;
+@property (nonatomic, strong) BmobObject *mineOjt;
 @end
 
 @implementation ColleagueViewController
@@ -49,7 +51,14 @@
 #pragma mark ----返回tableView各区的行数--
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [_teachObjectArr count];
+    if (tableView==_teachTable)
+    {
+        return [_teachObjectArr count];
+    } else if (tableView==_mineTable)
+    {
+        return 4;
+    }
+    return 0;
 }
 #pragma mark ----返回tableView有多少个区--
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -59,29 +68,66 @@
 #pragma mark ----返回每个单元格的内容--
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    BmobObject *teachObjc = [_teachObjectArr objectAtIndex:indexPath.row];
     UITableViewCell *teachCell = [tableView dequeueReusableCellWithIdentifier:@"teachCell"];
-    if (teachCell == nil)
+    if (tableView==_teachTable)
     {
-        teachCell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"teachCell"];
+        BmobObject *teachObjc = [_teachObjectArr objectAtIndex:indexPath.row];
+        
+        if (teachCell == nil)
+        {
+            teachCell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"teachCell"];
+        }
+
+        if (indexPath.row==[_teachObjectArr count]-1)
+        {
+            [GiFHUD dismiss];//加载结束。
+        }
+        teachCell.textLabel.text = [NSString stringWithFormat:@"%@        老师",[teachObjc objectForKey:@"UserName"]];
+        teachCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        teachCell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+    } else if (tableView==_mineTable)
+    {
+        if (teachCell==nil)
+        {
+            teachCell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"teachCell"];
+        }
+        teachCell.textLabel.textColor = [UIColor whiteColor];
+        teachCell.backgroundColor = [UIColor clearColor];
+        teachCell.selectionStyle = UITableViewCellSelectionStyleNone;
+        if (indexPath.row==0)
+        {
+            teachCell.textLabel.text = [NSString stringWithFormat:@"姓名： %@",[_mineOjt objectForKey:@"UserName"]];
+        } else if (indexPath.row==1)
+        {
+            teachCell.textLabel.text = [NSString stringWithFormat:@"性别： %@",[_mineOjt objectForKey:@"UserSex"]];
+        } else if (indexPath.row==2)
+        {
+            teachCell.textLabel.text = [NSString stringWithFormat:@"电话：%@",[_mineOjt objectForKey:@"UserTel"]];
+            NSLog(@"电话是：%@",teachCell.textLabel.text);
+        } else if (indexPath.row==3)
+        {
+            teachCell.textLabel.text = @"所教班级";
+            teachCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        }
     }
-    teachCell.textLabel.text = [NSString stringWithFormat:@"%@        老师",[teachObjc objectForKey:@"UserName"]];
-    teachCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    teachCell.selectionStyle = UITableViewCellSelectionStyleNone;
     return teachCell;
 }
 #pragma mark ----单元格点击方法--
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [GiFHUD setGifWithImageName:@"pika2.gif"];
-    [GiFHUD show];//正在加载。。
-    BmobObject *teachObjc = [_teachObjectArr objectAtIndex:indexPath.row];
-    TeachInforViewController *teachInfoVC = [[TeachInforViewController alloc]init];
-    teachInfoVC.delegate = self;
-    teachInfoVC.teachObject = teachObjc;
-    [self presentViewController:teachInfoVC animated:YES completion:nil];
+    if (tableView==_teachTable)
+    {
+        [GiFHUD setGifWithImageName:@"pika2.gif"];
+        [GiFHUD show];//正在加载。。
+        BmobObject *teachObjc = [_teachObjectArr objectAtIndex:indexPath.row];
+        TeachInforViewController *teachInfoVC = [[TeachInforViewController alloc]init];
+        teachInfoVC.delegate = self;
+        teachInfoVC.teachObject = teachObjc;
+        [self presentViewController:teachInfoVC animated:YES completion:nil];
+    }
 }
-#pragma mark ----获取老师列表--
+#pragma mark ----获取老师及自己的信息列表--
 - (void)getTeacherList
 {
     
@@ -92,6 +138,8 @@
     NSString *sql = [NSString stringWithFormat:@"select * from UserTable where UserName = '%@'",userName];
     [query queryInBackgroundWithBQL:sql block:^(BQLQueryResult *result, NSError *error)
     {
+        [GiFHUD setGifWithImageName:@"pika2.gif"];
+        [GiFHUD show];//正在加载。。
         if (error)
         {
             NSLog(@"error=%@",error);
@@ -120,6 +168,22 @@
                         }
                     }
                 }];
+            }
+        }
+    }];
+    [query queryInBackgroundWithBQL:sql block:^(BQLQueryResult *result, NSError *error) {
+        if (error)
+        {
+            NSLog(@"error2=%@",error);
+        } else if (result)
+        {
+            NSArray *resultArr = [NSArray arrayWithArray:result.resultsAry];
+            //                BmobObject *mineObject = [resultArr objectAtIndex:0];
+            //                _mineOjt = mineObject;
+            for (BmobObject *mineObject in resultArr)
+            {
+                _mineOjt = mineObject;
+                [_mineTable reloadData];
             }
         }
     }];
@@ -152,15 +216,16 @@
     //===================
     // Menu添加子View
     //===================
-    UIImageView *img = [[UIImageView alloc] initWithFrame:CGRectMake(50, 60, 80, 80)];
+    UIImageView *img = [[UIImageView alloc] initWithFrame:CGRectMake(60, 80, 80, 80)];
     [img setImage:[UIImage imageNamed:@"doge.jpg"]];
     [_slideMenu addSubview:img];
     
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(30, 140, 150, 340)];
-    label.text = @"这是第一行菜单\n\n这是第二行菜单\n\n这是第三行菜单\n\n这是第四行菜单\n\n这是第五行菜单\n\n这是第六行菜单";
-    [label setTextColor:[UIColor whiteColor]];
-    [label setNumberOfLines:0];
-    [_slideMenu addSubview:label];
+    _mineTable = [[UITableView alloc]initWithFrame:CGRectMake(5, 200, 200, 340)];
+    _mineTable.delegate = self;
+    _mineTable.dataSource = self;
+    _mineTable.backgroundColor = [UIColor clearColor];
+    _mineTable.bounces = NO;
+    [_slideMenu addSubview:_mineTable];
     
     
     //===================
