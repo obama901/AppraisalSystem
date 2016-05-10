@@ -15,6 +15,7 @@
 #import "GiFHUD.h"
 #import "UIImage+GIF.h"
 #import "MBProgressHUD+LJ.h"
+#import "MineInforViewController.h"
 
 @interface ColleagueViewController ()<XWPresentedOneControllerDelegate>
 {
@@ -77,11 +78,6 @@
         {
             teachCell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"teachCell"];
         }
-
-        if (indexPath.row==[_teachObjectArr count]-1)
-        {
-            [GiFHUD dismiss];//加载结束。
-        }
         teachCell.textLabel.text = [NSString stringWithFormat:@"%@        老师",[teachObjc objectForKey:@"UserName"]];
         teachCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         teachCell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -126,6 +122,13 @@
         teachInfoVC.teachObject = teachObjc;
         [self presentViewController:teachInfoVC animated:YES completion:nil];
     }
+    else if (tableView==_mineTable)
+    {
+        MineInforViewController *mineInVC = [[MineInforViewController alloc]init];
+        mineInVC.hidesBottomBarWhenPushed = YES;
+        mineInVC.mineObject = _mineOjt;
+        [self.navigationController pushViewController:mineInVC animated:YES];
+    }
 }
 #pragma mark ----获取老师及自己的信息列表--
 - (void)getTeacherList
@@ -138,8 +141,6 @@
     NSString *sql = [NSString stringWithFormat:@"select * from UserTable where UserName = '%@'",userName];
     [query queryInBackgroundWithBQL:sql block:^(BQLQueryResult *result, NSError *error)
     {
-        [GiFHUD setGifWithImageName:@"pika2.gif"];
-        [GiFHUD show];//正在加载。。
         if (error)
         {
             NSLog(@"error=%@",error);
@@ -154,6 +155,7 @@
                 NSString *str = [NSString stringWithFormat:@"select * from UserTable where UserSubject = '%@'",subjectStr];
                 [query queryInBackgroundWithBQL:str block:^(BQLQueryResult *result, NSError *error)
                 {
+                    
                     if (error)
                     {
                         NSLog(@"查询同事的错误是：%@",error);
@@ -162,6 +164,7 @@
                         NSArray *array = [NSArray arrayWithArray:result.resultsAry];
                         _teachObjectArr = [[NSMutableArray alloc]initWithArray:array];
                         [_teachTable reloadData];
+                        
                         for (BmobObject *teachObjc in array)
                         {
                             NSLog(@"得到的同事是：%@",[teachObjc objectForKey:@"UserName"]);
@@ -209,8 +212,7 @@
     // 设置弹力和速度，  默认的是20,15,60
     _slideMenu.ll_springDamping = 20;       // 阻力
     _slideMenu.ll_springVelocity = 15;      // 速度
-    _slideMenu.ll_springFramesNum = 60;     // 关键帧数量
-    
+    _slideMenu.ll_springFramesNum = 60;     // 关键帧数量    
     
     
     //===================

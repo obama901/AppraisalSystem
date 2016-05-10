@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C01FF221CE1C7C0001E648C /* MineInforViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C01FF201CE1C7C0001E648C /* MineInforViewController.m */; };
+		6C01FF231CE1C7C0001E648C /* MineInforViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C01FF211CE1C7C0001E648C /* MineInforViewController.xib */; };
 		6CF31CA31CC7610200084C14 /* WBPopMenuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF31C981CC7610200084C14 /* WBPopMenuModel.m */; };
 		6CF31CA41CC7610200084C14 /* WBPopMenuSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF31C9A1CC7610200084C14 /* WBPopMenuSingleton.m */; };
 		6CF31CA51CC7610200084C14 /* WBPopMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF31C9C1CC7610200084C14 /* WBPopMenuView.m */; };
@@ -93,6 +95,9 @@
 /* Begin PBXFileReference section */
 		05F4FF5B82CBF08955A98B7D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		6A01ADC1DCAAD0795A562DA2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C01FF1F1CE1C7C0001E648C /* MineInforViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineInforViewController.h; sourceTree = "<group>"; };
+		6C01FF201CE1C7C0001E648C /* MineInforViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineInforViewController.m; sourceTree = "<group>"; };
+		6C01FF211CE1C7C0001E648C /* MineInforViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineInforViewController.xib; sourceTree = "<group>"; };
 		6CF31C971CC7610200084C14 /* WBPopMenuModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBPopMenuModel.h; sourceTree = "<group>"; };
 		6CF31C981CC7610200084C14 /* WBPopMenuModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBPopMenuModel.m; sourceTree = "<group>"; };
 		6CF31C991CC7610200084C14 /* WBPopMenuSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBPopMenuSingleton.h; sourceTree = "<group>"; };
@@ -430,6 +435,9 @@
 			children = (
 				6CFAF6CE1CBEAE0C00889424 /* ColleagueViewController.h */,
 				6CFAF6CF1CBEAE0C00889424 /* ColleagueViewController.m */,
+				6C01FF1F1CE1C7C0001E648C /* MineInforViewController.h */,
+				6C01FF201CE1C7C0001E648C /* MineInforViewController.m */,
+				6C01FF211CE1C7C0001E648C /* MineInforViewController.xib */,
 				6CFEFA1F1CCCC3F70010B4C3 /* TeachInforViewController.h */,
 				6CFEFA201CCCC3F70010B4C3 /* TeachInforViewController.m */,
 				6CFEFA211CCCC3F70010B4C3 /* TeachInforViewController.xib */,
@@ -688,6 +696,7 @@
 				6CF79BBB1CBCBBCC0081CD50 /* Podfile in Resources */,
 				6CFAF6B61CBEA52300889424 /* colleagueIcon.png in Resources */,
 				6CF31CAE1CC761B900084C14 /* addLie.png in Resources */,
+				6C01FF231CE1C7C0001E648C /* MineInforViewController.xib in Resources */,
 				6CFAF6B01CBE92D400889424 /* Icon.png in Resources */,
 				6CFAF6B71CBEA52300889424 /* infermationIcon.png in Resources */,
 				6CF31CAF1CC761B900084C14 /* addOne.png in Resources */,
@@ -784,6 +793,7 @@
 				6CF31CA61CC7610200084C14 /* WBTableViewCell.m in Sources */,
 				6CFAF6D31CBEAE2800889424 /* ClassMatesViewController.m in Sources */,
 				6CFF5CC81CC67DE200406052 /* LLAnimationManager.m in Sources */,
+				6C01FF221CE1C7C0001E648C /* MineInforViewController.m in Sources */,
 				6CFEFA221CCCC3F80010B4C3 /* TeachInforViewController.m in Sources */,
 				6CF31CC01CC77A3E00084C14 /* MBProgressHUD+LJ.m in Sources */,
 				6CFEFA291CCD14870010B4C3 /* XWInteractiveTransition.m in Sources */,
