@@ -20,4 +20,5 @@
     
 }
 @property (nonatomic,strong)BmobObject *mineObject;
+@property (nonatomic,strong)BmobObject *mineClassObject;
 @end

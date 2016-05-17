@@ -44,7 +44,16 @@
 {
     _userName.text = [_teachObject objectForKey:@"UserName"];
     _userSubject.text = [_teachObject objectForKey:@"UserSubject"];
+    _userSex.text = [_teachObject objectForKey:@"UserSex"];
     _userTel.text = [_teachObject objectForKey:@"UserTel"];
+    _userClass1.text = [_classObject objectForKey:@"Class1"];
+    _userClass2.text = [_classObject objectForKey:@"Class2"];
+    _userClass3.text = [_classObject objectForKey:@"Class3"];
+}
+#pragma mark ----视图即将出现在屏幕上--
+- (void)viewWillAppear:(BOOL)animated
+{
+    
 }
 #pragma mark ----下面四个方法是转场动画的代理方法--
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source{

@@ -117,17 +117,53 @@
         [GiFHUD setGifWithImageName:@"pika2.gif"];
         [GiFHUD show];//正在加载。。
         BmobObject *teachObjc = [_teachObjectArr objectAtIndex:indexPath.row];
+        BmobQuery *query = [[BmobQuery alloc] init];
+        NSString *sql = [NSString stringWithFormat:@"select * from UserClass where UserName = '%@'",[teachObjc objectForKey:@"UserName"]];
         TeachInforViewController *teachInfoVC = [[TeachInforViewController alloc]init];
         teachInfoVC.delegate = self;
         teachInfoVC.teachObject = teachObjc;
-        [self presentViewController:teachInfoVC animated:YES completion:nil];
+        [query queryInBackgroundWithBQL:sql block:^(BQLQueryResult *result, NSError *error)
+         {
+             if (error)
+             {
+                 NSLog(@"error=---%@",error);
+             }
+             else if(result)
+             {
+                 NSArray *resultArr = [NSArray arrayWithArray:result.resultsAry];
+                 for (BmobObject *bObject in resultArr)
+                 {
+                     teachInfoVC.classObject = bObject;
+                 }
+                 [self presentViewController:teachInfoVC animated:YES completion:nil];
+             }
+         }];
+        
     }
     else if (tableView==_mineTable)
     {
         MineInforViewController *mineInVC = [[MineInforViewController alloc]init];
         mineInVC.hidesBottomBarWhenPushed = YES;
         mineInVC.mineObject = _mineOjt;
-        [self.navigationController pushViewController:mineInVC animated:YES];
+        BmobQuery *query = [[BmobQuery alloc] init];
+        NSString *sql = [NSString stringWithFormat:@"select * from UserClass where UserName = '%@'",[_mineOjt objectForKey:@"UserName"]];
+        [query queryInBackgroundWithBQL:sql block:^(BQLQueryResult *result, NSError *error)
+        {
+            if (error)
+            {
+                NSLog(@"error=-=-%@",error);
+            }
+            else if(result)
+            {
+                NSArray *resultArr = [NSArray arrayWithArray:result.resultsAry];
+                for (BmobObject *bObject in resultArr)
+                {
+                    mineInVC.mineClassObject = bObject;
+                }
+                [self.navigationController pushViewController:mineInVC animated:YES];
+            }
+        }];
+        
     }
 }
 #pragma mark ----获取老师及自己的信息列表--

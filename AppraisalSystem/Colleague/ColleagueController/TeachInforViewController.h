@@ -29,4 +29,5 @@
 }
 @property (nonatomic, assign) id<XWPresentedOneControllerDelegate> delegate;
 @property (nonatomic,assign) BmobObject *teachObject;
+@property (nonatomic,assign) BmobObject *classObject;
 @end

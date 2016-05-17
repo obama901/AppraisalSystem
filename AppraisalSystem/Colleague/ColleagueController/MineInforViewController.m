@@ -72,8 +72,11 @@
         } else if (isSuccessful)
         {
             NSLog(@"更新成功！！");
+            if ([_mineClass1.titleLabel.text isEqualToString:@"添加班级"]) {
+                [self.navigationController popToRootViewControllerAnimated:YES];
+            }
         }
-    }];
+    }];//对除了班级的其他信息的更新
     if (![_mineClass1.titleLabel.text isEqualToString:@"添加班级"])
     {
         BmobObject *bObj = [BmobObject objectWithClassName:@"UserClass"];
@@ -85,20 +88,135 @@
             if (![_mineClass3.titleLabel.text isEqualToString:@"添加班级"])
             {
                 [bObj setObject:_mineClass3.titleLabel.text forKey:@"Class3"];
-                
             }
         }
-        [bObj saveInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error)
+        if ([_mineClass1.titleLabel.text isEqualToString:_mineClass2.titleLabel.text]||[_mineClass1.titleLabel.text isEqualToString:_mineClass3.titleLabel.text]||[_mineClass2.titleLabel.text isEqualToString:_mineClass3.titleLabel.text])
         {
-            if (error)
+            if (![_mineClass2.titleLabel.text isEqualToString:@"添加班级"])
             {
-                NSLog(@"error===%@",error);
-            } else if (isSuccessful)
-            {
-                NSLog(@"保存班级成功！！");
+                UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"不可以拥有两个相同班级！" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+                [alert show];
             }
-        }];
+            else
+            {
+                BmobQuery *query = [[BmobQuery alloc] init];
+                NSString *sql = [NSString stringWithFormat:@"select * from UserClass where UserName = '%@'",_mineName.text];
+                [query queryInBackgroundWithBQL:sql block:^(BQLQueryResult *result, NSError *error)
+                 {
+                     if (error)
+                     {
+                         NSLog(@"error=%@",error);
+                     }
+                     else if(result)
+                     {
+                         NSArray *resultArr = [NSArray arrayWithArray:result.resultsAry];
+                         if ([resultArr count]==1)
+                         {
+                             for (BmobObject *bObject in resultArr)
+                             {
+                                 if (![_mineClass1.titleLabel.text isEqualToString:@"添加班级"])
+                                 {
+                                     [bObject setObject:[_mineObject objectForKey:@"UserName"] forKey:@"UserName"];
+                                     [bObject setObject:_mineClass1.titleLabel.text forKey:@"Class1"];
+                                     if (![_mineClass2.titleLabel.text isEqualToString:@"添加班级"])
+                                     {
+                                         [bObject setObject:_mineClass2.titleLabel.text forKey:@"Class2"];
+                                         if (![_mineClass3.titleLabel.text isEqualToString:@"添加班级"])
+                                         {
+                                             [bObject setObject:_mineClass3.titleLabel.text forKey:@"Class3"];
+                                         }
+                                     }
+                                     [bObject updateInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {
+                                         if (error) {
+                                             NSLog(@"error==--%@",error);
+                                         } else if (isSuccessful){
+                                             NSLog(@"更新班级数据成功！！");
+                                             [self.navigationController popToRootViewControllerAnimated:YES];
+                                         }
+                                     }];
+                                 }
+                                 
+                             }
+                             
+                         } else if ([resultArr count]==0){
+                             [bObj saveInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error)
+                              {
+                                  if (error)
+                                  {
+                                      NSLog(@"error===%@",error);
+                                  } else if (isSuccessful)
+                                  {
+                                      NSLog(@"保存班级成功！！");
+                                      [self.navigationController popToRootViewControllerAnimated:YES];
+                                  }
+                              }];
+                         }
+                     }
+                 }];//对有无班级进行判断，有就更新，没有就创建
+            }
+        }
+        else
+        {
+            BmobQuery *query = [[BmobQuery alloc] init];
+            NSString *sql = [NSString stringWithFormat:@"select * from UserClass where UserName = '%@'",_mineName.text];
+            [query queryInBackgroundWithBQL:sql block:^(BQLQueryResult *result, NSError *error)
+             {
+                 if (error)
+                 {
+                     NSLog(@"error=%@",error);
+                 }
+                 else if(result)
+                 {
+                     NSArray *resultArr = [NSArray arrayWithArray:result.resultsAry];
+                     if ([resultArr count]==1)
+                     {
+                         for (BmobObject *bObject in resultArr)
+                         {
+                             if (![_mineClass1.titleLabel.text isEqualToString:@"添加班级"])
+                             {
+                                 [bObject setObject:[_mineObject objectForKey:@"UserName"] forKey:@"UserName"];
+                                 [bObject setObject:_mineClass1.titleLabel.text forKey:@"Class1"];
+                                 if (![_mineClass2.titleLabel.text isEqualToString:@"添加班级"])
+                                 {
+                                     [bObject setObject:_mineClass2.titleLabel.text forKey:@"Class2"];
+                                     if (![_mineClass3.titleLabel.text isEqualToString:@"添加班级"])
+                                     {
+                                         [bObject setObject:_mineClass3.titleLabel.text forKey:@"Class3"];
+                                     }
+                                 }
+                                 [bObject updateInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {
+                                     if (error) {
+                                         NSLog(@"error==--%@",error);
+                                     } else if (isSuccessful){
+                                         NSLog(@"更新班级数据成功！！");
+                                         [self.navigationController popToRootViewControllerAnimated:YES];
+                                     }
+                                 }];
+                             }
+                             
+                         }
+                         
+                     } else if ([resultArr count]==0){
+                         [bObj saveInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error)
+                          {
+                              if (error)
+                              {
+                                  NSLog(@"error===%@",error);
+                              } else if (isSuccessful)
+                              {
+                                  NSLog(@"保存班级成功！！");
+                                  [self.navigationController popToRootViewControllerAnimated:YES];
+                              }
+                          }];
+                     }
+                 }
+             }];//对有无班级进行判断，有就更新，没有就创建
+        }
+        
+        
     }
+    
+    
 }
 #pragma mark ----选择性别的点击事件--
 - (void)chanceSex
@@ -159,7 +277,30 @@
         [_mineSex setTitle:@"请选择" forState:UIControlStateNormal];
     }
     _mineTel.text = [_mineObject objectForKey:@"UserTel"];
-    
+    if (![_mineClassObject objectForKey:@"Class1"])
+    {
+        
+    }
+    else
+    {
+        [_mineClass1 setTitle:[_mineClassObject objectForKey:@"Class1"] forState:UIControlStateNormal];
+        if (![_mineClassObject objectForKey:@"Class2"])
+        {
+            
+        }
+        else
+        {
+            [_mineClass2 setTitle:[_mineClassObject objectForKey:@"Class2"] forState:UIControlStateNormal];
+            if (![_mineClassObject objectForKey:@"Class3"])
+            {
+                
+            }
+            else
+            {
+                [_mineClass3 setTitle:[_mineClassObject objectForKey:@"Class3"] forState:UIControlStateNormal];
+            }
+        }
+    }
 }
 /*
 #pragma mark - Navigation
