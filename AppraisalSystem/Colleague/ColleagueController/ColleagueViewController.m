@@ -16,6 +16,7 @@
 #import "UIImage+GIF.h"
 #import "MBProgressHUD+LJ.h"
 #import "MineInforViewController.h"
+#import "DCPicScrollView.h"
 
 @interface ColleagueViewController ()<XWPresentedOneControllerDelegate>
 {
@@ -44,7 +45,7 @@
 #pragma mark ----创建教师同事列表--
 - (void)creatTeacherTable
 {
-    _teachTable = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, 320, 431)];
+    _teachTable = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, 320, 431)style:UITableViewStyleGrouped];
     _teachTable.delegate = self;
     _teachTable.dataSource = self;
     [self.view addSubview:_teachTable];
@@ -165,6 +166,47 @@
         }];
         
     }
+}
+#pragma mark ----返回区头的方法是banner轮播广告--
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    if (tableView==_teachTable)
+    {
+        UIView *bannerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 200)];
+        NSMutableArray *arr2 = [[NSMutableArray alloc] init];
+        
+        NSMutableArray *arr3 = [[NSMutableArray alloc] initWithObjects:@"中学生教学评价系统上线！",@"我校北校区完工即将投入使用",@"第28界化学奥林匹克竞赛喜报", nil];
+        
+        for (int i = 1; i < 4; i++) {
+            [arr2 addObject:[NSString stringWithFormat:@"banner%d.png",i]];
+        };
+        
+        
+        DCPicScrollView  *picView1 = [DCPicScrollView picScrollViewWithFrame:CGRectMake(0,0,self.view.frame.size.width, 200) WithImageUrls:arr2];
+        
+        picView1.style = PageControlAtCenter;
+        picView1.titleData = arr3;
+        
+        picView1.backgroundColor = [UIColor clearColor];
+        [picView1 setImageViewDidTapAtIndex:^(NSInteger index) {
+            printf("你点到我了😳index:%zd\n",index);
+        }];
+        
+        picView1.AutoScrollDelay = 2.0f;
+        
+        [bannerView addSubview:picView1];
+        return bannerView;
+    }
+    return nil;
+}
+#pragma mark ----返回区头高度的方法--
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    if (tableView==_teachTable)
+    {
+        return 200;
+    }
+    return 0;
 }
 #pragma mark ----获取老师及自己的信息列表--
 - (void)getTeacherList

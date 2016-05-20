@@ -58,6 +58,16 @@
 		6CFAF6D01CBEAE0C00889424 /* ColleagueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFAF6CF1CBEAE0C00889424 /* ColleagueViewController.m */; };
 		6CFAF6D31CBEAE2800889424 /* ClassMatesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFAF6D21CBEAE2800889424 /* ClassMatesViewController.m */; };
 		6CFAF6D61CBEAE3900889424 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFAF6D51CBEAE3900889424 /* MineViewController.m */; };
+		6CFBC5791CEC85C700C0E1DD /* DCPicScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFBC5751CEC85C700C0E1DD /* DCPicScrollView.m */; };
+		6CFBC57A1CEC85C700C0E1DD /* DCPicScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFBC5751CEC85C700C0E1DD /* DCPicScrollView.m */; };
+		6CFBC57B1CEC85C700C0E1DD /* DCWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFBC5771CEC85C700C0E1DD /* DCWebImageManager.m */; };
+		6CFBC57C1CEC85C700C0E1DD /* DCWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFBC5771CEC85C700C0E1DD /* DCWebImageManager.m */; };
+		6CFBC5801CECE34900C0E1DD /* banner1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CFBC57D1CECE34900C0E1DD /* banner1.png */; };
+		6CFBC5811CECE34900C0E1DD /* banner1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CFBC57D1CECE34900C0E1DD /* banner1.png */; };
+		6CFBC5821CECE34900C0E1DD /* banner2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CFBC57E1CECE34900C0E1DD /* banner2.png */; };
+		6CFBC5831CECE34900C0E1DD /* banner2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CFBC57E1CECE34900C0E1DD /* banner2.png */; };
+		6CFBC5841CECE34900C0E1DD /* banner3.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CFBC57F1CECE34900C0E1DD /* banner3.png */; };
+		6CFBC5851CECE34900C0E1DD /* banner3.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CFBC57F1CECE34900C0E1DD /* banner3.png */; };
 		6CFEFA221CCCC3F80010B4C3 /* TeachInforViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFEFA201CCCC3F70010B4C3 /* TeachInforViewController.m */; };
 		6CFEFA231CCCC3F80010B4C3 /* TeachInforViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CFEFA211CCCC3F70010B4C3 /* TeachInforViewController.xib */; };
 		6CFEFA291CCD14870010B4C3 /* XWInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFEFA261CCD14870010B4C3 /* XWInteractiveTransition.m */; };
@@ -171,6 +181,13 @@
 		6CFAF6D21CBEAE2800889424 /* ClassMatesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassMatesViewController.m; sourceTree = "<group>"; };
 		6CFAF6D41CBEAE3900889424 /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
 		6CFAF6D51CBEAE3900889424 /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		6CFBC5741CEC85C700C0E1DD /* DCPicScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPicScrollView.h; sourceTree = "<group>"; };
+		6CFBC5751CEC85C700C0E1DD /* DCPicScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPicScrollView.m; sourceTree = "<group>"; };
+		6CFBC5761CEC85C700C0E1DD /* DCWebImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCWebImageManager.h; sourceTree = "<group>"; };
+		6CFBC5771CEC85C700C0E1DD /* DCWebImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCWebImageManager.m; sourceTree = "<group>"; };
+		6CFBC57D1CECE34900C0E1DD /* banner1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banner1.png; sourceTree = "<group>"; };
+		6CFBC57E1CECE34900C0E1DD /* banner2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banner2.png; sourceTree = "<group>"; };
+		6CFBC57F1CECE34900C0E1DD /* banner3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banner3.png; sourceTree = "<group>"; };
 		6CFEFA1F1CCCC3F70010B4C3 /* TeachInforViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeachInforViewController.h; sourceTree = "<group>"; };
 		6CFEFA201CCCC3F70010B4C3 /* TeachInforViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeachInforViewController.m; sourceTree = "<group>"; };
 		6CFEFA211CCCC3F70010B4C3 /* TeachInforViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeachInforViewController.xib; sourceTree = "<group>"; };
@@ -333,6 +350,9 @@
 				6CF31CA91CC761B900084C14 /* menuIcon */,
 				6CFAF6B11CBEA52300889424 /* tabIcon */,
 				6CFAF6AF1CBE92D400889424 /* Icon.png */,
+				6CFBC57D1CECE34900C0E1DD /* banner1.png */,
+				6CFBC57E1CECE34900C0E1DD /* banner2.png */,
+				6CFBC57F1CECE34900C0E1DD /* banner3.png */,
 				6CF31CB01CC7630E00084C14 /* addIcon.png */,
 				6CFF5CCD1CC6801C00406052 /* doge.jpg */,
 				6CFAF6AD1CBE90F600889424 /* blueWhite.png */,
@@ -380,6 +400,7 @@
 		6CFAF6AA1CBE6DD700889424 /* Other Part */ = {
 			isa = PBXGroup;
 			children = (
+				6CFBC5781CEC85C700C0E1DD /* DCPicscrollView */,
 				6CFEFA241CCD14870010B4C3 /* XWPresent */,
 				6CF31CB21CC77A3E00084C14 /* ProgressHUD */,
 				6CF31C961CC7610200084C14 /* PopMenuView */,
@@ -523,6 +544,18 @@
 			children = (
 			);
 			path = MineView;
+			sourceTree = "<group>";
+		};
+		6CFBC5781CEC85C700C0E1DD /* DCPicscrollView */ = {
+			isa = PBXGroup;
+			children = (
+				6CFBC5741CEC85C700C0E1DD /* DCPicScrollView.h */,
+				6CFBC5751CEC85C700C0E1DD /* DCPicScrollView.m */,
+				6CFBC5761CEC85C700C0E1DD /* DCWebImageManager.h */,
+				6CFBC5771CEC85C700C0E1DD /* DCWebImageManager.m */,
+			);
+			name = DCPicscrollView;
+			path = "../../../第三方类库/DCPicScrollView广告轮播banner可以网络图片/DCWebPicScrollView/DCPicscrollView";
 			sourceTree = "<group>";
 		};
 		6CFEFA241CCD14870010B4C3 /* XWPresent */ = {
@@ -677,12 +710,15 @@
 				6CF79BCE1CBCE0EA0081CD50 /* RegisterViewController.xib in Resources */,
 				6CFF5CBC1CC6778C00406052 /* menuIcon.png in Resources */,
 				6CF79B971CBCB8670081CD50 /* LaunchScreen.storyboard in Resources */,
+				6CFBC5821CECE34900C0E1DD /* banner2.png in Resources */,
 				6CF79BD21CBCED1C0081CD50 /* ReturnBtn.PNG in Resources */,
+				6CFBC5841CECE34900C0E1DD /* banner3.png in Resources */,
 				6CFAF6BB1CBEAA8D00889424 /* classIcon2.png in Resources */,
 				6CF31CC11CC77A3E00084C14 /* MBProgressHUD.bundle in Resources */,
 				6CF31CC41CC77A3E00084C14 /* pika3.gif in Resources */,
 				6CF31CC31CC77A3E00084C14 /* pika2.gif in Resources */,
 				6CF79BC11CBCD2CE0081CD50 /* eye_closed.png in Resources */,
+				6CFBC5801CECE34900C0E1DD /* banner1.png in Resources */,
 				6CF79BC01CBCD2CE0081CD50 /* eye_open.png in Resources */,
 				6CF79BC81CBCD84D0081CD50 /* RegisterBtn.PNG in Resources */,
 				6CFAF6A91CBE6DC600889424 /* LTPickerView.xib in Resources */,
@@ -712,6 +748,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CFBC5831CECE34900C0E1DD /* banner2.png in Resources */,
+				6CFBC5851CECE34900C0E1DD /* banner3.png in Resources */,
+				6CFBC5811CECE34900C0E1DD /* banner1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -781,6 +820,7 @@
 				6CFEFA301CCD26670010B4C3 /* UIView+anchorPoint.m in Sources */,
 				6CFAF6D01CBEAE0C00889424 /* ColleagueViewController.m in Sources */,
 				6CF31CC21CC77A3E00084C14 /* MBProgressHUD.m in Sources */,
+				6CFBC5791CEC85C700C0E1DD /* DCPicScrollView.m in Sources */,
 				6CFAF6A81CBE6DC600889424 /* LTPickerView.m in Sources */,
 				6CF31CA31CC7610200084C14 /* WBPopMenuModel.m in Sources */,
 				6CFEFA2F1CCD26670010B4C3 /* UIView+ FrameChange.m in Sources */,
@@ -793,6 +833,7 @@
 				6CF31CA61CC7610200084C14 /* WBTableViewCell.m in Sources */,
 				6CFAF6D31CBEAE2800889424 /* ClassMatesViewController.m in Sources */,
 				6CFF5CC81CC67DE200406052 /* LLAnimationManager.m in Sources */,
+				6CFBC57B1CEC85C700C0E1DD /* DCWebImageManager.m in Sources */,
 				6C01FF221CE1C7C0001E648C /* MineInforViewController.m in Sources */,
 				6CFEFA221CCCC3F80010B4C3 /* TeachInforViewController.m in Sources */,
 				6CF31CC01CC77A3E00084C14 /* MBProgressHUD+LJ.m in Sources */,
@@ -815,6 +856,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CF79BA21CBCB8670081CD50 /* AppraisalSystemTests.m in Sources */,
+				6CFBC57C1CEC85C700C0E1DD /* DCWebImageManager.m in Sources */,
+				6CFBC57A1CEC85C700C0E1DD /* DCPicScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
