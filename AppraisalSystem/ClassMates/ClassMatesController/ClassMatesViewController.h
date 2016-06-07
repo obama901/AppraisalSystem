@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ClassMatesViewController : UIViewController
+@interface ClassMatesViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 
 @end

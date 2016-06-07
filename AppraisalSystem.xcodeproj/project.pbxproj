@@ -26,6 +26,9 @@
 		6CF31CC31CC77A3E00084C14 /* pika2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6CF31CBB1CC77A3E00084C14 /* pika2.gif */; };
 		6CF31CC41CC77A3E00084C14 /* pika3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6CF31CBC1CC77A3E00084C14 /* pika3.gif */; };
 		6CF31CC51CC77A3E00084C14 /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF31CBE1CC77A3E00084C14 /* UIImage+GIF.m */; };
+		6CF551F41CFEDC9C00DC3330 /* ClassTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF551F21CFEDC9C00DC3330 /* ClassTableViewCell.m */; };
+		6CF551F51CFEDC9C00DC3330 /* ClassTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CF551F31CFEDC9C00DC3330 /* ClassTableViewCell.xib */; };
+		6CF551F81CFEDFF000DC3330 /* ClassMateEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF551F71CFEDFF000DC3330 /* ClassMateEngine.m */; };
 		6CF79B891CBCB8670081CD50 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF79B881CBCB8670081CD50 /* main.m */; };
 		6CF79B8C1CBCB8670081CD50 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF79B8B1CBCB8670081CD50 /* AppDelegate.m */; };
 		6CF79B8F1CBCB8670081CD50 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF79B8E1CBCB8670081CD50 /* ViewController.m */; };
@@ -135,6 +138,11 @@
 		6CF31CBC1CC77A3E00084C14 /* pika3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = pika3.gif; sourceTree = "<group>"; };
 		6CF31CBD1CC77A3E00084C14 /* UIImage+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GIF.h"; sourceTree = "<group>"; };
 		6CF31CBE1CC77A3E00084C14 /* UIImage+GIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GIF.m"; sourceTree = "<group>"; };
+		6CF551F11CFEDC9C00DC3330 /* ClassTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassTableViewCell.h; sourceTree = "<group>"; };
+		6CF551F21CFEDC9C00DC3330 /* ClassTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassTableViewCell.m; sourceTree = "<group>"; };
+		6CF551F31CFEDC9C00DC3330 /* ClassTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClassTableViewCell.xib; sourceTree = "<group>"; };
+		6CF551F61CFEDFF000DC3330 /* ClassMateEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassMateEngine.h; sourceTree = "<group>"; };
+		6CF551F71CFEDFF000DC3330 /* ClassMateEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassMateEngine.m; sourceTree = "<group>"; };
 		6CF79B841CBCB8670081CD50 /* AppraisalSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppraisalSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CF79B881CBCB8670081CD50 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6CF79B8A1CBCB8670081CD50 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -502,6 +510,8 @@
 		6CFAF6C81CBEAD7B00889424 /* ClassMatesModel */ = {
 			isa = PBXGroup;
 			children = (
+				6CF551F61CFEDFF000DC3330 /* ClassMateEngine.h */,
+				6CF551F71CFEDFF000DC3330 /* ClassMateEngine.m */,
 			);
 			path = ClassMatesModel;
 			sourceTree = "<group>";
@@ -509,6 +519,9 @@
 		6CFAF6C91CBEAD7B00889424 /* ClassMatesView */ = {
 			isa = PBXGroup;
 			children = (
+				6CF551F11CFEDC9C00DC3330 /* ClassTableViewCell.h */,
+				6CF551F21CFEDC9C00DC3330 /* ClassTableViewCell.m */,
+				6CF551F31CFEDC9C00DC3330 /* ClassTableViewCell.xib */,
 			);
 			path = ClassMatesView;
 			sourceTree = "<group>";
@@ -708,6 +721,7 @@
 				6CF79BD01CBCEAF30081CD50 /* RegisterInterface.png in Resources */,
 				6CF79BC91CBCD84D0081CD50 /* LoginBtn.PNG in Resources */,
 				6CF79BCE1CBCE0EA0081CD50 /* RegisterViewController.xib in Resources */,
+				6CF551F51CFEDC9C00DC3330 /* ClassTableViewCell.xib in Resources */,
 				6CFF5CBC1CC6778C00406052 /* menuIcon.png in Resources */,
 				6CF79B971CBCB8670081CD50 /* LaunchScreen.storyboard in Resources */,
 				6CFBC5821CECE34900C0E1DD /* banner2.png in Resources */,
@@ -842,8 +856,10 @@
 				6CF31CBF1CC77A3E00084C14 /* GiFHUD.m in Sources */,
 				6CF79B8C1CBCB8670081CD50 /* AppDelegate.m in Sources */,
 				6CF31CA51CC7610200084C14 /* WBPopMenuView.m in Sources */,
+				6CF551F41CFEDC9C00DC3330 /* ClassTableViewCell.m in Sources */,
 				6CF31CC51CC77A3E00084C14 /* UIImage+GIF.m in Sources */,
 				6CF79B891CBCB8670081CD50 /* main.m in Sources */,
+				6CF551F81CFEDFF000DC3330 /* ClassMateEngine.m in Sources */,
 				6CFF5CCA1CC67DE200406052 /* LLDisplayLayer.m in Sources */,
 				6CF79BCD1CBCE0EA0081CD50 /* RegisterViewController.m in Sources */,
 				6CFF5CCC1CC67DE200406052 /* UIView+SetRect.m in Sources */,

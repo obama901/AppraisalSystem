@@ -9,10 +9,14 @@
 #import "ClassMatesViewController.h"
 #import "WBPopMenuModel.h"
 #import "WBPopMenuSingleton.h"
+#import "ClassMateEngine.h"
+#import "ClassTableViewCell.h"
 
 @interface ClassMatesViewController ()
 {
     UIBarButtonItem *addBtn;
+    UITableView *_classTable;
+    NSArray *_classArr;
 }
 @end
 
@@ -20,48 +24,54 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor greenColor];
-    [self creatAddBtn];
+    [self toGetClassArrary];
+    [self creatTableView];
 }
-#pragma mark ----创建添加学生菜单按钮--
-- (void)creatAddBtn
+#pragma mark ----创建tableView for Class--
+- (void)creatTableView
 {
-    addBtn = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"addIcon.png"] style:UIBarButtonItemStylePlain target:self action:@selector(PopMenuClik:)];
-    self.navigationController.navigationBar.tintColor = [UIColor blackColor];
-    self.navigationItem.rightBarButtonItem = addBtn;
+    _classTable = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, 320, 480) style:UITableViewStylePlain];
+    _classTable.rowHeight = 85;
+    _classTable.dataSource = self;
+    _classTable.delegate = self;
+    [_classTable registerNib:[UINib nibWithNibName:@"ClassTableViewCell" bundle:nil] forCellReuseIdentifier:@"classCell"];
+    [self.view addSubview:_classTable];
 }
-#pragma mark ----添加学生菜单点击方法--
-- (void)PopMenuClik:(UIButton *)btn
+#pragma mark ----tableView的协议方法，返回每个区有多少行--
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSMutableArray *obj = [NSMutableArray array];
-    
-    for (NSInteger i = 0; i < [self titles].count; i++) {
-        
-        WBPopMenuModel * info = [WBPopMenuModel new];
-        info.image = [self images][i];
-        info.title = [self titles][i];
-        [obj addObject:info];
+    if ([_classArr count]>=1)
+    {
+        return [_classArr count];
+    } else {
+        return 1;
     }
-    
-    [[WBPopMenuSingleton shareManager]showPopMenuSelecteWithFrame:150
-                                                             item:obj
-                                                           action:^(NSInteger index) {
-                                                               NSLog(@"index:%ld",(long)index);
-                                                               
-                                                           }];
+    return 0;
 }
-- (NSArray *) titles {
-    return @[@"添加学生",
-             @"添加一行",
-             @"添加一列"
-             ];
+#pragma mark ----返回tableView单元格的内容--
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    ClassTableViewCell *classCell = [tableView dequeueReusableCellWithIdentifier:@"classCell" forIndexPath:indexPath];
+    classCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    classCell.selectionStyle = UITableViewCellSelectionStyleNone;
+    if ([_classArr count]>=1)
+    {
+        classCell.classNameTitle.text = [_classArr objectAtIndex:indexPath.row];
+        classCell.classDescribe.text = @"等待填写";
+    } else {
+        classCell.classNameTitle.text = @"暂无班级";
+        classCell.classDescribe.text = @"请您到个人中心去完善自己的班级信息！";
+    }
+    return classCell;
 }
-
-- (NSArray *) images {
-    return @[@"addOne.png",
-             @"addHang",
-             @"addLie"
-             ];
+#pragma mark ----通过请求数据获得所教班级的名称--
+- (void)toGetClassArrary
+{
+    [ClassMateEngine getClassNumberAndNameWithComplentBlock:^(NSArray *classNameArr)
+    {
+        _classArr = [NSArray arrayWithArray:classNameArr];
+        [_classTable reloadData];
+    }];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
