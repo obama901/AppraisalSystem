@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		6C01FF221CE1C7C0001E648C /* MineInforViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C01FF201CE1C7C0001E648C /* MineInforViewController.m */; };
 		6C01FF231CE1C7C0001E648C /* MineInforViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C01FF211CE1C7C0001E648C /* MineInforViewController.xib */; };
+		6C05CBAC1D08192300F71A98 /* ClassPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C05CBAB1D08192300F71A98 /* ClassPersonViewController.m */; };
+		6CF0D51B1D0C396300DA6D59 /* ClassSubjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF0D51A1D0C396300DA6D59 /* ClassSubjectViewController.m */; };
+		6CF0D51E1D0C4F3800DA6D59 /* SubjectInfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF0D51D1D0C4F3800DA6D59 /* SubjectInfViewController.m */; };
+		6CF0D5221D0C77CC00DA6D59 /* SubjectInfTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF0D5201D0C77CC00DA6D59 /* SubjectInfTableViewCell.m */; };
+		6CF0D5231D0C77CC00DA6D59 /* SubjectInfTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CF0D5211D0C77CC00DA6D59 /* SubjectInfTableViewCell.xib */; };
+		6CF1FD7B1D0BE87E00FB1C9A /* desk.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CF1FD7A1D0BE87E00FB1C9A /* desk.png */; };
 		6CF31CA31CC7610200084C14 /* WBPopMenuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF31C981CC7610200084C14 /* WBPopMenuModel.m */; };
 		6CF31CA41CC7610200084C14 /* WBPopMenuSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF31C9A1CC7610200084C14 /* WBPopMenuSingleton.m */; };
 		6CF31CA51CC7610200084C14 /* WBPopMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF31C9C1CC7610200084C14 /* WBPopMenuView.m */; };
@@ -111,6 +117,16 @@
 		6C01FF1F1CE1C7C0001E648C /* MineInforViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineInforViewController.h; sourceTree = "<group>"; };
 		6C01FF201CE1C7C0001E648C /* MineInforViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineInforViewController.m; sourceTree = "<group>"; };
 		6C01FF211CE1C7C0001E648C /* MineInforViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineInforViewController.xib; sourceTree = "<group>"; };
+		6C05CBAA1D08192300F71A98 /* ClassPersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassPersonViewController.h; sourceTree = "<group>"; };
+		6C05CBAB1D08192300F71A98 /* ClassPersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassPersonViewController.m; sourceTree = "<group>"; };
+		6CF0D5191D0C396300DA6D59 /* ClassSubjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassSubjectViewController.h; sourceTree = "<group>"; };
+		6CF0D51A1D0C396300DA6D59 /* ClassSubjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassSubjectViewController.m; sourceTree = "<group>"; };
+		6CF0D51C1D0C4F3700DA6D59 /* SubjectInfViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubjectInfViewController.h; sourceTree = "<group>"; };
+		6CF0D51D1D0C4F3800DA6D59 /* SubjectInfViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubjectInfViewController.m; sourceTree = "<group>"; };
+		6CF0D51F1D0C77CC00DA6D59 /* SubjectInfTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubjectInfTableViewCell.h; sourceTree = "<group>"; };
+		6CF0D5201D0C77CC00DA6D59 /* SubjectInfTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubjectInfTableViewCell.m; sourceTree = "<group>"; };
+		6CF0D5211D0C77CC00DA6D59 /* SubjectInfTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubjectInfTableViewCell.xib; sourceTree = "<group>"; };
+		6CF1FD7A1D0BE87E00FB1C9A /* desk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = desk.png; sourceTree = "<group>"; };
 		6CF31C971CC7610200084C14 /* WBPopMenuModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBPopMenuModel.h; sourceTree = "<group>"; };
 		6CF31C981CC7610200084C14 /* WBPopMenuModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBPopMenuModel.m; sourceTree = "<group>"; };
 		6CF31C991CC7610200084C14 /* WBPopMenuSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBPopMenuSingleton.h; sourceTree = "<group>"; };
@@ -362,6 +378,7 @@
 				6CFBC57E1CECE34900C0E1DD /* banner2.png */,
 				6CFBC57F1CECE34900C0E1DD /* banner3.png */,
 				6CF31CB01CC7630E00084C14 /* addIcon.png */,
+				6CF1FD7A1D0BE87E00FB1C9A /* desk.png */,
 				6CFF5CCD1CC6801C00406052 /* doge.jpg */,
 				6CFAF6AD1CBE90F600889424 /* blueWhite.png */,
 				6CF79BD11CBCED1C0081CD50 /* ReturnBtn.PNG */,
@@ -503,6 +520,12 @@
 			children = (
 				6CFAF6D11CBEAE2800889424 /* ClassMatesViewController.h */,
 				6CFAF6D21CBEAE2800889424 /* ClassMatesViewController.m */,
+				6C05CBAA1D08192300F71A98 /* ClassPersonViewController.h */,
+				6C05CBAB1D08192300F71A98 /* ClassPersonViewController.m */,
+				6CF0D5191D0C396300DA6D59 /* ClassSubjectViewController.h */,
+				6CF0D51A1D0C396300DA6D59 /* ClassSubjectViewController.m */,
+				6CF0D51C1D0C4F3700DA6D59 /* SubjectInfViewController.h */,
+				6CF0D51D1D0C4F3800DA6D59 /* SubjectInfViewController.m */,
 			);
 			path = ClassMatesController;
 			sourceTree = "<group>";
@@ -522,6 +545,9 @@
 				6CF551F11CFEDC9C00DC3330 /* ClassTableViewCell.h */,
 				6CF551F21CFEDC9C00DC3330 /* ClassTableViewCell.m */,
 				6CF551F31CFEDC9C00DC3330 /* ClassTableViewCell.xib */,
+				6CF0D51F1D0C77CC00DA6D59 /* SubjectInfTableViewCell.h */,
+				6CF0D5201D0C77CC00DA6D59 /* SubjectInfTableViewCell.m */,
+				6CF0D5211D0C77CC00DA6D59 /* SubjectInfTableViewCell.xib */,
 			);
 			path = ClassMatesView;
 			sourceTree = "<group>";
@@ -730,6 +756,8 @@
 				6CFAF6BB1CBEAA8D00889424 /* classIcon2.png in Resources */,
 				6CF31CC11CC77A3E00084C14 /* MBProgressHUD.bundle in Resources */,
 				6CF31CC41CC77A3E00084C14 /* pika3.gif in Resources */,
+				6CF1FD7B1D0BE87E00FB1C9A /* desk.png in Resources */,
+				6CF0D5231D0C77CC00DA6D59 /* SubjectInfTableViewCell.xib in Resources */,
 				6CF31CC31CC77A3E00084C14 /* pika2.gif in Resources */,
 				6CF79BC11CBCD2CE0081CD50 /* eye_closed.png in Resources */,
 				6CFBC5801CECE34900C0E1DD /* banner1.png in Resources */,
@@ -838,16 +866,19 @@
 				6CFAF6A81CBE6DC600889424 /* LTPickerView.m in Sources */,
 				6CF31CA31CC7610200084C14 /* WBPopMenuModel.m in Sources */,
 				6CFEFA2F1CCD26670010B4C3 /* UIView+ FrameChange.m in Sources */,
+				6CF0D51E1D0C4F3800DA6D59 /* SubjectInfViewController.m in Sources */,
 				6CFF5CC91CC67DE200406052 /* LLCircleLayer.m in Sources */,
 				6CF31CA71CC7610200084C14 /* WBTableViewDataSource.m in Sources */,
 				6CFAF6D61CBEAE3900889424 /* MineViewController.m in Sources */,
 				6CF31CA81CC7610200084C14 /* WBTableViewDelegate.m in Sources */,
+				6CF0D51B1D0C396300DA6D59 /* ClassSubjectViewController.m in Sources */,
 				6CFF5CCB1CC67DE200406052 /* LLSlideMenu.m in Sources */,
 				6CF79B8F1CBCB8670081CD50 /* ViewController.m in Sources */,
 				6CF31CA61CC7610200084C14 /* WBTableViewCell.m in Sources */,
 				6CFAF6D31CBEAE2800889424 /* ClassMatesViewController.m in Sources */,
 				6CFF5CC81CC67DE200406052 /* LLAnimationManager.m in Sources */,
 				6CFBC57B1CEC85C700C0E1DD /* DCWebImageManager.m in Sources */,
+				6CF0D5221D0C77CC00DA6D59 /* SubjectInfTableViewCell.m in Sources */,
 				6C01FF221CE1C7C0001E648C /* MineInforViewController.m in Sources */,
 				6CFEFA221CCCC3F80010B4C3 /* TeachInforViewController.m in Sources */,
 				6CF31CC01CC77A3E00084C14 /* MBProgressHUD+LJ.m in Sources */,
@@ -861,6 +892,7 @@
 				6CF79B891CBCB8670081CD50 /* main.m in Sources */,
 				6CF551F81CFEDFF000DC3330 /* ClassMateEngine.m in Sources */,
 				6CFF5CCA1CC67DE200406052 /* LLDisplayLayer.m in Sources */,
+				6C05CBAC1D08192300F71A98 /* ClassPersonViewController.m in Sources */,
 				6CF79BCD1CBCE0EA0081CD50 /* RegisterViewController.m in Sources */,
 				6CFF5CCC1CC67DE200406052 /* UIView+SetRect.m in Sources */,
 				6CF31CA41CC7610200084C14 /* WBPopMenuSingleton.m in Sources */,

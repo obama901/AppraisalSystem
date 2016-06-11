@@ -39,8 +39,8 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
-                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
             </tableViewCellContentView>
+            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
                 <outlet property="classDescribe" destination="mIH-Mo-QFT" id="ehy-rk-nPj"/>
                 <outlet property="classNameTitle" destination="AMD-ac-mf6" id="ae2-Rm-rE3"/>

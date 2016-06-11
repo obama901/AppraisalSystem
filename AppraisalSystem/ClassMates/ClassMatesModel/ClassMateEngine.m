@@ -48,4 +48,19 @@
     }];
     
 }
++ (void)getClassMatesNameWithClassName:(NSString *)className withComplentBlock:(void (^)(NSArray *))complentBlock
+{
+    BmobQuery *query = [[BmobQuery alloc] init];
+    NSString *sql = [NSString stringWithFormat:@"select * from UserStudents where SdtClass = '%@'",className];
+    [query queryInBackgroundWithBQL:sql block:^(BQLQueryResult *result, NSError *error) {
+        if (error)
+        {
+            NSLog(@"获取学生的错误==%@",error);
+        } else if (result)
+        {
+            NSArray *resultArr = [NSArray arrayWithArray:result.resultsAry];
+            complentBlock(resultArr);
+        }
+    }];
+}
 @end

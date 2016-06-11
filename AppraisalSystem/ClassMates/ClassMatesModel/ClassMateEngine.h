@@ -11,4 +11,6 @@
 @interface ClassMateEngine : NSObject
 
 + (void)getClassNumberAndNameWithComplentBlock:(void(^)(NSArray *))complentBlock;
++ (void)getClassMatesNameWithClassName:(NSString *)className withComplentBlock:(void(^)(NSArray *))complentBlock;
+
 @end

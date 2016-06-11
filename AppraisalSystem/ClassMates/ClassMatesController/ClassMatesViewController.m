@@ -11,6 +11,7 @@
 #import "WBPopMenuSingleton.h"
 #import "ClassMateEngine.h"
 #import "ClassTableViewCell.h"
+#import "ClassPersonViewController.h"
 
 @interface ClassMatesViewController ()
 {
@@ -24,6 +25,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"班级";
     [self toGetClassArrary];
     [self creatTableView];
 }
@@ -63,6 +65,18 @@
         classCell.classDescribe.text = @"请您到个人中心去完善自己的班级信息！";
     }
     return classCell;
+}
+#pragma mark ----单元格点击事件--
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    if ([_classArr count]>=1)
+    {
+        ClassPersonViewController *clPerVC = [[ClassPersonViewController alloc]init];
+        clPerVC.className = [_classArr objectAtIndex:indexPath.row];
+        clPerVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:clPerVC animated:YES];
+    }
 }
 #pragma mark ----通过请求数据获得所教班级的名称--
 - (void)toGetClassArrary
