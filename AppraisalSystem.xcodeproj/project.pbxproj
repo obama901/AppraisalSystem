@@ -10,6 +10,9 @@
 		6C01FF221CE1C7C0001E648C /* MineInforViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C01FF201CE1C7C0001E648C /* MineInforViewController.m */; };
 		6C01FF231CE1C7C0001E648C /* MineInforViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C01FF211CE1C7C0001E648C /* MineInforViewController.xib */; };
 		6C05CBAC1D08192300F71A98 /* ClassPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C05CBAB1D08192300F71A98 /* ClassPersonViewController.m */; };
+		6C6358F71D0E515D00FB4603 /* TeacherRemarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6358F51D0E515D00FB4603 /* TeacherRemarkViewController.m */; };
+		6C6358F81D0E515D00FB4603 /* TeacherRemarkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C6358F61D0E515D00FB4603 /* TeacherRemarkViewController.xib */; };
+		6C6358FC1D0E8B1D00FB4603 /* LTAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6358FA1D0E8B1D00FB4603 /* LTAlertView.m */; };
 		6CF0D51B1D0C396300DA6D59 /* ClassSubjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF0D51A1D0C396300DA6D59 /* ClassSubjectViewController.m */; };
 		6CF0D51E1D0C4F3800DA6D59 /* SubjectInfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF0D51D1D0C4F3800DA6D59 /* SubjectInfViewController.m */; };
 		6CF0D5221D0C77CC00DA6D59 /* SubjectInfTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF0D5201D0C77CC00DA6D59 /* SubjectInfTableViewCell.m */; };
@@ -35,6 +38,7 @@
 		6CF551F41CFEDC9C00DC3330 /* ClassTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF551F21CFEDC9C00DC3330 /* ClassTableViewCell.m */; };
 		6CF551F51CFEDC9C00DC3330 /* ClassTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CF551F31CFEDC9C00DC3330 /* ClassTableViewCell.xib */; };
 		6CF551F81CFEDFF000DC3330 /* ClassMateEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF551F71CFEDFF000DC3330 /* ClassMateEngine.m */; };
+		6CF66D181D0D4C1D002CEA08 /* HistroyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF66D171D0D4C1D002CEA08 /* HistroyViewController.m */; };
 		6CF79B891CBCB8670081CD50 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF79B881CBCB8670081CD50 /* main.m */; };
 		6CF79B8C1CBCB8670081CD50 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF79B8B1CBCB8670081CD50 /* AppDelegate.m */; };
 		6CF79B8F1CBCB8670081CD50 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF79B8E1CBCB8670081CD50 /* ViewController.m */; };
@@ -53,6 +57,8 @@
 		6CF79BCE1CBCE0EA0081CD50 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CF79BCC1CBCE0EA0081CD50 /* RegisterViewController.xib */; };
 		6CF79BD01CBCEAF30081CD50 /* RegisterInterface.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CF79BCF1CBCEAF30081CD50 /* RegisterInterface.png */; };
 		6CF79BD21CBCED1C0081CD50 /* ReturnBtn.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 6CF79BD11CBCED1C0081CD50 /* ReturnBtn.PNG */; };
+		6CF9ED6B1D0F3C7D00BE9F19 /* AddSdtViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF9ED691D0F3C7D00BE9F19 /* AddSdtViewController.m */; };
+		6CF9ED6C1D0F3C7D00BE9F19 /* AddSdtViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CF9ED6A1D0F3C7D00BE9F19 /* AddSdtViewController.xib */; };
 		6CFAF6A81CBE6DC600889424 /* LTPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFAF6A61CBE6DC600889424 /* LTPickerView.m */; };
 		6CFAF6A91CBE6DC600889424 /* LTPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CFAF6A71CBE6DC600889424 /* LTPickerView.xib */; };
 		6CFAF6AE1CBE90F600889424 /* blueWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CFAF6AD1CBE90F600889424 /* blueWhite.png */; };
@@ -119,6 +125,11 @@
 		6C01FF211CE1C7C0001E648C /* MineInforViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineInforViewController.xib; sourceTree = "<group>"; };
 		6C05CBAA1D08192300F71A98 /* ClassPersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassPersonViewController.h; sourceTree = "<group>"; };
 		6C05CBAB1D08192300F71A98 /* ClassPersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassPersonViewController.m; sourceTree = "<group>"; };
+		6C6358F41D0E515D00FB4603 /* TeacherRemarkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherRemarkViewController.h; sourceTree = "<group>"; };
+		6C6358F51D0E515D00FB4603 /* TeacherRemarkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherRemarkViewController.m; sourceTree = "<group>"; };
+		6C6358F61D0E515D00FB4603 /* TeacherRemarkViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeacherRemarkViewController.xib; sourceTree = "<group>"; };
+		6C6358F91D0E8B1D00FB4603 /* LTAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTAlertView.h; sourceTree = "<group>"; };
+		6C6358FA1D0E8B1D00FB4603 /* LTAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTAlertView.m; sourceTree = "<group>"; };
 		6CF0D5191D0C396300DA6D59 /* ClassSubjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassSubjectViewController.h; sourceTree = "<group>"; };
 		6CF0D51A1D0C396300DA6D59 /* ClassSubjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassSubjectViewController.m; sourceTree = "<group>"; };
 		6CF0D51C1D0C4F3700DA6D59 /* SubjectInfViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubjectInfViewController.h; sourceTree = "<group>"; };
@@ -159,6 +170,8 @@
 		6CF551F31CFEDC9C00DC3330 /* ClassTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClassTableViewCell.xib; sourceTree = "<group>"; };
 		6CF551F61CFEDFF000DC3330 /* ClassMateEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassMateEngine.h; sourceTree = "<group>"; };
 		6CF551F71CFEDFF000DC3330 /* ClassMateEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassMateEngine.m; sourceTree = "<group>"; };
+		6CF66D161D0D4C1D002CEA08 /* HistroyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistroyViewController.h; sourceTree = "<group>"; };
+		6CF66D171D0D4C1D002CEA08 /* HistroyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistroyViewController.m; sourceTree = "<group>"; };
 		6CF79B841CBCB8670081CD50 /* AppraisalSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppraisalSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CF79B881CBCB8670081CD50 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6CF79B8A1CBCB8670081CD50 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -186,6 +199,9 @@
 		6CF79BCC1CBCE0EA0081CD50 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		6CF79BCF1CBCEAF30081CD50 /* RegisterInterface.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RegisterInterface.png; sourceTree = "<group>"; };
 		6CF79BD11CBCED1C0081CD50 /* ReturnBtn.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ReturnBtn.PNG; sourceTree = "<group>"; };
+		6CF9ED681D0F3C7D00BE9F19 /* AddSdtViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddSdtViewController.h; sourceTree = "<group>"; };
+		6CF9ED691D0F3C7D00BE9F19 /* AddSdtViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddSdtViewController.m; sourceTree = "<group>"; };
+		6CF9ED6A1D0F3C7D00BE9F19 /* AddSdtViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddSdtViewController.xib; sourceTree = "<group>"; };
 		6CFAF6A51CBE6DC600889424 /* LTPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTPickerView.h; sourceTree = "<group>"; };
 		6CFAF6A61CBE6DC600889424 /* LTPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTPickerView.m; sourceTree = "<group>"; };
 		6CFAF6A71CBE6DC600889424 /* LTPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LTPickerView.xib; sourceTree = "<group>"; };
@@ -272,6 +288,16 @@
 				05F4FF5B82CBF08955A98B7D /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		6C6358FB1D0E8B1D00FB4603 /* LTAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				6C6358F91D0E8B1D00FB4603 /* LTAlertView.h */,
+				6C6358FA1D0E8B1D00FB4603 /* LTAlertView.m */,
+			);
+			name = LTAlertView;
+			path = ../../../../../../Desktop/LTAlertView/LTAlertView;
 			sourceTree = "<group>";
 		};
 		6CF31C961CC7610200084C14 /* PopMenuView */ = {
@@ -425,6 +451,7 @@
 		6CFAF6AA1CBE6DD700889424 /* Other Part */ = {
 			isa = PBXGroup;
 			children = (
+				6C6358FB1D0E8B1D00FB4603 /* LTAlertView */,
 				6CFBC5781CEC85C700C0E1DD /* DCPicscrollView */,
 				6CFEFA241CCD14870010B4C3 /* XWPresent */,
 				6CF31CB21CC77A3E00084C14 /* ProgressHUD */,
@@ -522,10 +549,18 @@
 				6CFAF6D21CBEAE2800889424 /* ClassMatesViewController.m */,
 				6C05CBAA1D08192300F71A98 /* ClassPersonViewController.h */,
 				6C05CBAB1D08192300F71A98 /* ClassPersonViewController.m */,
+				6CF9ED681D0F3C7D00BE9F19 /* AddSdtViewController.h */,
+				6CF9ED691D0F3C7D00BE9F19 /* AddSdtViewController.m */,
+				6CF9ED6A1D0F3C7D00BE9F19 /* AddSdtViewController.xib */,
 				6CF0D5191D0C396300DA6D59 /* ClassSubjectViewController.h */,
 				6CF0D51A1D0C396300DA6D59 /* ClassSubjectViewController.m */,
 				6CF0D51C1D0C4F3700DA6D59 /* SubjectInfViewController.h */,
 				6CF0D51D1D0C4F3800DA6D59 /* SubjectInfViewController.m */,
+				6CF66D161D0D4C1D002CEA08 /* HistroyViewController.h */,
+				6CF66D171D0D4C1D002CEA08 /* HistroyViewController.m */,
+				6C6358F41D0E515D00FB4603 /* TeacherRemarkViewController.h */,
+				6C6358F51D0E515D00FB4603 /* TeacherRemarkViewController.m */,
+				6C6358F61D0E515D00FB4603 /* TeacherRemarkViewController.xib */,
 			);
 			path = ClassMatesController;
 			sourceTree = "<group>";
@@ -749,6 +784,7 @@
 				6CF79BCE1CBCE0EA0081CD50 /* RegisterViewController.xib in Resources */,
 				6CF551F51CFEDC9C00DC3330 /* ClassTableViewCell.xib in Resources */,
 				6CFF5CBC1CC6778C00406052 /* menuIcon.png in Resources */,
+				6C6358F81D0E515D00FB4603 /* TeacherRemarkViewController.xib in Resources */,
 				6CF79B971CBCB8670081CD50 /* LaunchScreen.storyboard in Resources */,
 				6CFBC5821CECE34900C0E1DD /* banner2.png in Resources */,
 				6CF79BD21CBCED1C0081CD50 /* ReturnBtn.PNG in Resources */,
@@ -767,6 +803,7 @@
 				6CF31CAD1CC761B900084C14 /* addHang.png in Resources */,
 				6CFEFA231CCCC3F80010B4C3 /* TeachInforViewController.xib in Resources */,
 				6CFF5CD01CC6954800406052 /* menuBg.png in Resources */,
+				6CF9ED6C1D0F3C7D00BE9F19 /* AddSdtViewController.xib in Resources */,
 				6CF79BBD1CBCCAD10081CD50 /* LoginInterface.png in Resources */,
 				6CF79B941CBCB8670081CD50 /* Assets.xcassets in Resources */,
 				6CFAF6AE1CBE90F600889424 /* blueWhite.png in Resources */,
@@ -859,9 +896,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CFAF6C11CBEAB7700889424 /* TabViewController.m in Sources */,
+				6CF66D181D0D4C1D002CEA08 /* HistroyViewController.m in Sources */,
 				6CFEFA301CCD26670010B4C3 /* UIView+anchorPoint.m in Sources */,
 				6CFAF6D01CBEAE0C00889424 /* ColleagueViewController.m in Sources */,
 				6CF31CC21CC77A3E00084C14 /* MBProgressHUD.m in Sources */,
+				6C6358F71D0E515D00FB4603 /* TeacherRemarkViewController.m in Sources */,
 				6CFBC5791CEC85C700C0E1DD /* DCPicScrollView.m in Sources */,
 				6CFAF6A81CBE6DC600889424 /* LTPickerView.m in Sources */,
 				6CF31CA31CC7610200084C14 /* WBPopMenuModel.m in Sources */,
@@ -876,6 +915,7 @@
 				6CF79B8F1CBCB8670081CD50 /* ViewController.m in Sources */,
 				6CF31CA61CC7610200084C14 /* WBTableViewCell.m in Sources */,
 				6CFAF6D31CBEAE2800889424 /* ClassMatesViewController.m in Sources */,
+				6CF9ED6B1D0F3C7D00BE9F19 /* AddSdtViewController.m in Sources */,
 				6CFF5CC81CC67DE200406052 /* LLAnimationManager.m in Sources */,
 				6CFBC57B1CEC85C700C0E1DD /* DCWebImageManager.m in Sources */,
 				6CF0D5221D0C77CC00DA6D59 /* SubjectInfTableViewCell.m in Sources */,
@@ -891,6 +931,7 @@
 				6CF31CC51CC77A3E00084C14 /* UIImage+GIF.m in Sources */,
 				6CF79B891CBCB8670081CD50 /* main.m in Sources */,
 				6CF551F81CFEDFF000DC3330 /* ClassMateEngine.m in Sources */,
+				6C6358FC1D0E8B1D00FB4603 /* LTAlertView.m in Sources */,
 				6CFF5CCA1CC67DE200406052 /* LLDisplayLayer.m in Sources */,
 				6C05CBAC1D08192300F71A98 /* ClassPersonViewController.m in Sources */,
 				6CF79BCD1CBCE0EA0081CD50 /* RegisterViewController.m in Sources */,

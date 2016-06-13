@@ -9,11 +9,12 @@
 #import "ClassPersonViewController.h"
 #import "ClassMateEngine.h"
 #import "ClassSubjectViewController.h"
+#import "AddSdtViewController.h"
 
 @interface ClassPersonViewController ()
 
 {
-    
+    UIBarButtonItem *_addSdtBtn;
     UICollectionView *_collectionView;
 }
 @property (nonatomic,strong)NSMutableArray *StudentsObjArr;
@@ -24,8 +25,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"班级座位";
+    _addSdtBtn = [[UIBarButtonItem alloc]initWithTitle:@"添加" style:UIBarButtonItemStylePlain target:self action:@selector(addStudentBtnClick)];
+    self.navigationItem.rightBarButtonItem = _addSdtBtn;
+//    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+//    [center addObserver:self selector:@selector(notifcationClick) name:@"添加学生" object:nil];
     [self toGetStudentsNameOrId];
     [self creatCollectionView];
+}
+//#pragma mark ----通知相应事件--
+//-(void)notifcationClick
+//{
+//    [_collectionView reloadData];
+//}
+#pragma mark ----进入添加学生点击事件--
+- (void)addStudentBtnClick
+{
+    AddSdtViewController *addSdtVC = [[AddSdtViewController alloc]init];
+    addSdtVC.className = self.className;
+    [self.navigationController pushViewController:addSdtVC animated:YES];
 }
 #pragma mark ----获取学生们的姓名与学号--
 - (void)toGetStudentsNameOrId
